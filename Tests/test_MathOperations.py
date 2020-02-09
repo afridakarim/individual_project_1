@@ -6,6 +6,7 @@ from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponent import Exponent
 from MathOperations.root import Root
+from MathOperations.logarithm import Logarithm
 
 
 class MyTestCase(unittest.TestCase):
@@ -26,7 +27,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(4, Exponent.power(2,2))
 
     def test_MathOperations_root(self):
-        self.assertEqual(1,Root.root(1))
+        self.assertEqual(1, Root.root(1))
+
+    def test_MathOperations_log(self):
+        self.assertEqual(4,Logarithm.log(16,2))
 
     def test_MathOperations_sum_list(self):
         valuelist = [1, 2, 3]

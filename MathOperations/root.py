@@ -2,5 +2,5 @@ import math
 class Root:
 
     @staticmethod
-    def root(radicand):
-        return math.sqrt(radicand)
+    def root(a):
+        return math.sqrt(a)

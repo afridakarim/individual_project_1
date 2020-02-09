@@ -35,6 +35,10 @@ class MyTestCase(unittest.TestCase):
         result = self.calculator.Root(1)
         self.assertEqual(1,result)
 
+    def test_calculator_return_log(self):
+        result = self.calculator.Log(16,2)
+        self.assertEqual(4,result)
+
     def test_calculator_access_difference_result(self):
         self.calculator.Difference(1, 2)
         self.assertEqual(-1, self.calculator.Result)
@@ -53,6 +57,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_calculator_access_power_result(self):
         self.calculator.Power(2,2)
+        self.assertEqual(4,self.calculator.Result)
+
+    def test_calculator_access_root_result(self):
+        self.calculator.Root(1)
+        self.assertEqual(1,self.calculator.Result)
+
+    def test_calculator_access_log_result(self):
+        self.calculator.Log(16,2)
         self.assertEqual(4,self.calculator.Result)
 
     def test_multiple_calculators(self):
