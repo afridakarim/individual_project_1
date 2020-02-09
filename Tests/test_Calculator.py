@@ -32,15 +32,12 @@ class MyTestCase(unittest.TestCase):
         self.calculator.Sum(1, 2)
         self.assertEqual(3, self.calculator.Result)
 
-    def test_calculator_access_product_result(self):
-        self.calculator.Product(1,2)
-        self.assertEqual(2, self.calculator.Result)
-
     def test_multiple_calculators(self):
         calculator1 = Calculator()
         calculator2 = Calculator()
         self.calculator.Sum(calculator1.Sum(1, 2), calculator2.Difference(3, 4))
         self.assertEqual(2, self.calculator.Result)
+
 
 
 if __name__ == '__main__':

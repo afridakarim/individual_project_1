@@ -20,13 +20,6 @@ class MyTestCase(unittest.TestCase):
         valuelist = [1, 2, 3]
         self.assertEqual(6, Addition.sum(valuelist))
 
-    def test_MathOperations_difference_list(self):
-        differenceValueList = [3,2,1]
-        self.assertEqual(-6,Subtraction.difference(differenceValueList))
-
-    def test_MathOperations_product_list(self):
-        multiplicationValueList = [0,0,0]
-        self.assertEqual(0,Multiplication.product(multiplicationValueList))
 
 
 if __name__ == '__main__':
