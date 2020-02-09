@@ -31,6 +31,10 @@ class MyTestCase(unittest.TestCase):
         result = self.calculator.Power(2,2)
         self.assertEqual(4,result)
 
+    def test_calculator_return_root(self):
+        result = self.calculator.Root(1)
+        self.assertEqual(1,result)
+
     def test_calculator_access_difference_result(self):
         self.calculator.Difference(1, 2)
         self.assertEqual(-1, self.calculator.Result)

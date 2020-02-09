@@ -3,6 +3,7 @@ from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
 from MathOperations.division import Division
 from MathOperations.exponent import Exponent
+from MathOperations.root import Root
 
 
 class Calculator:
@@ -29,4 +30,8 @@ class Calculator:
 
     def Power(self, a,b):
         self.Result = Exponent.power(a,b)
+        return self.Result
+
+    def Root(self,a):
+        self.Result = Root.root(a)
         return self.Result
