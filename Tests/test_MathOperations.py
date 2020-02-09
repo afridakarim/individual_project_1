@@ -3,6 +3,8 @@ import unittest
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
+from MathOperations.division import Division
+from MathOperations.exponent import Exponent
 
 
 class MyTestCase(unittest.TestCase):
@@ -15,6 +17,12 @@ class MyTestCase(unittest.TestCase):
 
     def test_MathOperations_multiplication(self):
         self.assertEqual(4,Multiplication.product(2,2))
+
+    def test_MathOperations_division(self):
+        self.assertEqual(3, Division.quotient(6,2))
+
+    def test_MathOperations_exponent(self):
+        self.assertEqual(4, Exponent.power(2,2))
 
     def test_MathOperations_sum_list(self):
         valuelist = [1, 2, 3]

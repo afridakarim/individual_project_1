@@ -16,12 +16,19 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(3, result)
 
     def test_calculator_return_difference(self):
-
         result = self.calculator.Difference(1, 2)
         self.assertEqual(-1, result)
 
     def test_calculator_return_product(self):
         result = self.calculator.Product(2,2)
+        self.assertEqual(4,result)
+
+    def test_calculator_return_quotient(self):
+        result = self.calculator.Division(6,2)
+        self.assertEqual(3,result)
+
+    def test_calculator_return_power(self):
+        result = self.calculator.Power(2,2)
         self.assertEqual(4,result)
 
     def test_calculator_access_difference_result(self):
@@ -31,6 +38,18 @@ class MyTestCase(unittest.TestCase):
     def test_calculator_access_sum_result(self):
         self.calculator.Sum(1, 2)
         self.assertEqual(3, self.calculator.Result)
+
+    def test_calculator_access_product_result(self):
+        self.calculator.Product(2,2)
+        self.assertEqual(4, self.calculator.Result)
+
+    def test_calculator_access_quotient_result(self):
+        self.calculator.Division(6,2)
+        self.assertEqual(3, self.calculator.Result)
+
+    def test_calculator_access_power_result(self):
+        self.calculator.Power(2,2)
+        self.assertEqual(4,self.calculator.Result)
 
     def test_multiple_calculators(self):
         calculator1 = Calculator()

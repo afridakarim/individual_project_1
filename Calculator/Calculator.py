@@ -1,6 +1,8 @@
 from MathOperations.addition import Addition
 from MathOperations.subtraction import Subtraction
 from MathOperations.multiplication import Multiplication
+from MathOperations.division import Division
+from MathOperations.exponent import Exponent
 
 
 class Calculator:
@@ -19,4 +21,12 @@ class Calculator:
 
     def Product(self,a,b):
         self.Result = Multiplication.product(a,b)
+        return self.Result
+
+    def Division(self, a,b):
+        self.Result = Division.quotient(a,b)
+        return self.Result
+
+    def Power(self, a,b):
+        self.Result = Exponent.power(a,b)
         return self.Result
